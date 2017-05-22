@@ -1,0 +1,29 @@
+{
+  "name": "js-utility-underscore",
+  "version": "1.0.0",
+  "description": "ES2015 reimplementation of a portion of the Underscore library",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "mocha --compilers js:babel-register spec/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrpool/js-utility-underscore.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^1.8.1",
+    "chai-change": "^2.1.2",
+    "mocha": "^2.0.1"
+  },
+  "author": "Keith and Jonathan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrpool/js-utility-underscore/issues"
+  },
+  "homepage": "https://github.com/jrpool/js-utility-underscore#readme"
+}
