@@ -59,6 +59,13 @@ describe('_first', function() {
         )
       }
     )
+    it(
+      '_first() with n > length returns whole array', function() {
+        const anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
+        expect(_first(anArray, 6))
+          .to.deep.equal([2, [3], [4, 5], '6', {item: 7, thing: 8}])
+      }
+    )
     it('_first() with a negative n argument returns undefined', function() {
       const anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
       expect(_first(anArray, -5)).to.be.undefined
@@ -76,6 +83,27 @@ describe('_first', function() {
     it('_first() with n === 0 returns undefined', function() {
       const anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
       expect(_first(anArray, 0)).to.be.undefined
+    })
+    it('_first() with non-integer n returns undefined', function() {
+      const anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
+      expect(_first(anArray, 1.5)).to.be.undefined
+    })
+    it('_first() with non-number n returns undefined', function() {
+      const anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
+      expect(_first(anArray, '2')).to.be.undefined
+    })
+  })
+
+  context('sparse array', function() {
+    it('_first() with no n returns undefined', function() {
+      const anArray = []
+      anArray[2] = 'third'
+      expect(_first(anArray)).to.be.undefined
+    })
+    it('_first() with positive n returns undefined', function() {
+      const anArray = []
+      anArray[2] = 'third'
+      expect(_first(anArray, 1)).to.be.undefined
     })
   })
 
