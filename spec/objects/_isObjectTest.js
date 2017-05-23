@@ -25,4 +25,13 @@ describe('_isObject()', function() {
   it('should return false if given a number', function() {
     expect(_isObject(2)).to.be.false
   })
+  it('should return false if given no input', function() {
+    expect(_isObject()).to.be.false
+  })
+  it('should return true if given empty array', function() {
+    expect(_isObject([])).to.be.true
+  })
+  it('should return true if given empty object', function() {
+    expect(_isObject({})).to.be.true
+  })
 })
