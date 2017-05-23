@@ -45,7 +45,7 @@ describe('_initial', function() {
       expect(_initial(array1)).to.deep.equal([2, [3], [4, 5], '6'])
     })
     it(
-      '_initial() with 0 < n < length returns array of all but last n elements',
+      '_initial() with 1 < n < length returns array of all but last n elements',
       function() {
         const anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
         expect(_initial(anArray, 2)).to.deep.equal([2, [3], [4, 5]])

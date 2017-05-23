@@ -41,14 +41,11 @@ describe('_first', function() {
     it('_first() with no n argument returns first element', function() {
       let anArray = [undefined, [3], [4, 5], '6', {item: 7, thing: 8}]
       expect(_first(anArray)).to.equal(undefined)
-      anArray = []
-      anArray[4] = 'fifth'
-      expect(_first(anArray)).to.equal(undefined)
       anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
       expect(_first(anArray)).to.equal(2)
     })
     it(
-      '_first() with 0 < n < length returns array of first n elements',
+      '_first() with 1 < n < length returns array of first n elements',
       function() {
         const anArray = [2, [3], [4, 5], '6', {item: 7, thing: 8}]
         expect(_first(anArray, 2)).to.deep.equal([2, [3]])
