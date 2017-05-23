@@ -2,7 +2,6 @@ import chai, { expect } from 'chai'
 import _last from '../../src/arrays/_last'
 
 describe('_last', function() {
-  'use strict'
 
   it('is a function', function() {
     expect(_last).to.be.a('function')
