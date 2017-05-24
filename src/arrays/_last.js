@@ -1,5 +1,3 @@
-'use strict';
-
 /*
   Function declaration for _last and export statement making that
   function the default export from this module.
@@ -7,7 +5,7 @@
     array: array.
     n (optional): element count.
   Preconditions:
-    0. array is an array.
+    0. array is a nonempty, nonsparse array.
     1. n is a positive integer.
 */
 export default function _last(array, n = 1) {
