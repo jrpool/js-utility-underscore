@@ -2,8 +2,8 @@ import chai from 'chai'
 import { expect } from 'chai'
 import _isArguments from '../../src/objects/_isArguments'
 
-const testFunction = (function() { return _isArguments(arguments); })(7, 9, 20);
-const tooManyArguments = (function() { return _isArguments(arguments); })(7, 9, 20, 3);
+const testFunction = (function(a, b, c) { return _isArguments(arguments); })(7, 9, 20);
+const tooManyArguments = (function(a, b, c) { return _isArguments(arguments); })(7, 9, 20, 3);
 
 
 describe('_isArguments()', function() {
