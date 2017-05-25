@@ -16,6 +16,7 @@ describe('_intersection', function() {
       '_intersection() returns empty array when any argument is an empty array',
       function() {
         expect(_intersection([], [1, 2, 3], [1, 2, 4])).to.deep.equal([])
+        expect(_intersection([1, 2, 3], [], [1, 2, 4])).to.deep.equal([])
       }
     )
     it('_intersection() returns the intersection of 1 array', function() {
