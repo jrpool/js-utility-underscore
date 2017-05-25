@@ -64,7 +64,6 @@ describe('_union', function() {
     it(
       '_union() returns undefined when any argument contains null',
       function() {
-        const anArray = [1, 2, 'a', [3]]
         expect(_union([5, null, 6], [5, 7, 6])).to.be.undefined
       }
     )
