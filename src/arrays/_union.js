@@ -3,7 +3,7 @@
   function the default export from this module.
   Preconditions:
     0. There is at least 1 argument.
-    1. All arguments are nonsparse array, none of whose elements in an array,
+    1. All arguments are nonsparse arrays, none of whose elements in an array,
       function, or object.
 */
 export default function _union() {
