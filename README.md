@@ -3,6 +3,15 @@
 ES2015 reimplementation of a portion of the Underscore library
 Project Team : fancy-thrasher
 
+## Notes
+
+Syntactic and stylistic differences between modules, not in conflict with the
+specifications, exist in this project.
+
+Any test files in which arrow function expressions could be but are not used
+are written to conform with the [recommendation][mocha] that “Passing arrow
+functions … to Mocha is discouraged”.
+
 ## Functions
 
 ```
@@ -135,3 +144,4 @@ This goal is the sister goal of [Common JS Utility Functions - Lodash](37-Common
 [jsdoc]: http://usejsdoc.org/
 [npm]: https://www.npmjs.com/
 [npm-documentation]: https://www.npmjs.com/package/documentation
+[mocha]: https://mochajs.org/#arrow-functions
