@@ -2,7 +2,7 @@ import chai from 'chai'
 import { expect } from 'chai'
 import _clone from '../../src/objects/_clone'
 
-describe.only('clone()', function() {
+describe('clone()', function() {
   it('should be a function', function() {
     expect(_clone).to.be.a('function')
   })
