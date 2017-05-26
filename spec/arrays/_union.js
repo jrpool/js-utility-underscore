@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import chai, { expect } from 'chai'
 import _union from '../../src/arrays/_union'
 
 describe('_union', function() {
@@ -58,7 +58,7 @@ describe('_union', function() {
     it(
       '_union() returns undefined when any argument contains an object',
       function() {
-        expect(_union(['a'], [1, 2, { a: 1, b: 2 }])).to.be.undefined
+        expect(_union(['a'], [1, 2, {a: 1, b: 2}])).to.be.undefined
       }
     )
     it(
@@ -70,14 +70,14 @@ describe('_union', function() {
     it(
       '_union() returns undefined when any argument contains a function',
       function() {
-        const fn = function() { return 'hello' }
+        const fn = function() {return 'hello'}
         expect(_union([1, 2, 3, fn, 4, 5], [2, 3, 4])).to.be.undefined
       }
     )
     it(
       '_union() returns undefined when any argument is not an array',
       function() {
-        const fn = function() { return 'hello' }
+        const fn = function() {return 'hello'}
         expect(_union(1, [1, 2, 3])).to.be.undefined
         expect(_union([3, 4], 3)).to.be.undefined
         expect(_union([3, 4], '3')).to.be.undefined

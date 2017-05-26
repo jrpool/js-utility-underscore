@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import chai, { expect } from 'chai'
 import _unescape from '../../src/utility/_unescape'
 
 describe('_unescape', function() {
@@ -16,11 +16,11 @@ describe('_unescape', function() {
     })
     it('unescapes all required entities', function() {
       expect(_unescape('PG&amp;E &lt;&lt;&#x60;electricity&#x27;&gt;&gt; is &quot;cheap&quot;'))
-        .to.equal('PG&E <<`electricity\'>> is "cheap"')
+      .to.equal('PG&E <<`electricity\'>> is "cheap"')
     })
     it('unescapes all required entities if &#x60; is decimalized', function() {
       expect(_unescape('PG&amp;E &lt;&lt;&#96;electricity&#x27;&gt;&gt; is &quot;cheap&quot;'))
-        .to.equal('PG&E <<`electricity\'>> is "cheap"')
+      .to.equal('PG&E <<`electricity\'>> is "cheap"')
     })
     it('returns a blank string if given a blank string', function() {
       expect(_unescape('')).to.equal('')
@@ -50,8 +50,7 @@ describe('_unescape', function() {
       }
     )
     it(
-      'returns undefined when argument 0 is null',
-      function() {
+      'returns undefined when argument 0 is null', function() {
         expect(_unescape(null)).to.be.undefined
       }
     )

@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import chai, { expect } from 'chai'
 import _size from '../../src/collections/_size'
 
 describe('_size', function() {
@@ -10,7 +10,7 @@ describe('_size', function() {
     expect(_size([1, 2, '3', 10])).to.equal(4)
   })
   it('_size() returns 3 when given {a: 1, b: "2", c: [5, 6, 7]}', function() {
-    expect(_size({ a: 1, b: '2', c: [5, 6, 7] })).to.equal(3)
+    expect(_size({a: 1, b: '2', c: [5, 6, 7]})).to.equal(3)
   })
   it('_size() returns 0 when given an empty array', function() {
     expect(_size([])).to.equal(0)

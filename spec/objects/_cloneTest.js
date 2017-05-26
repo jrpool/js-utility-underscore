@@ -1,3 +1,4 @@
+import chai from 'chai'
 import { expect } from 'chai'
 import _clone from '../../src/objects/_clone'
 
