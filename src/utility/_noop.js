@@ -3,5 +3,5 @@
   function the default export from this module.
 */
 export default function _noop() {
-  return undefined;
+  return undefined
 }

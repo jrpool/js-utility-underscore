@@ -21,18 +21,18 @@ export default function _escape(string) {
       '&amp;': '&'
     }
     // Identify a copy of the string.
-    let unescapedString = string.slice();
+    let unescapedString = string.slice()
     // For each character entity to be unescaped:
     for (let original in escaper) {
       // Replace its tokens in the string copy with the represented character.
       unescapedString
-        = unescapedString.replace(RegExp(original, 'g'), escaper[original]);
+        = unescapedString.replace(RegExp(original, 'g'), escaper[original])
     }
-    return unescapedString;
+    return unescapedString
   }
   // Otherwise, i.e. if the argument is invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

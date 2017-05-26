@@ -15,7 +15,7 @@ export default function _lastIndexOf(array, value, fromIndex = 0) {
   const isValidEl = function(element) {
     return (!(
       Array.isArray(element) || ['function', 'object'].includes(typeof element)
-    ));
+    ))
   }
   // If the arguments are superficially valid:
   if (
@@ -37,16 +37,16 @@ export default function _lastIndexOf(array, value, fromIndex = 0) {
     for (let i = 0; i < array.length; i++) {
       // If it is invalid:
       if (! isValidEl(array[i])) {
-        return undefined;
+        return undefined
       }
     }
     // Return the result.
-    const lastIndex = array.slice(fromIndex).lastIndexOf(value);
-    return lastIndex > -1 ? lastIndex + fromIndex : -1;
+    const lastIndex = array.slice(fromIndex).lastIndexOf(value)
+    return lastIndex > -1 ? lastIndex + fromIndex : -1
   }
   // Otherwise, i.e. if the arguments are superficially invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

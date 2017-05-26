@@ -19,30 +19,30 @@ export default function _random(min, max) {
         typeof arguments[i] !== 'number'
         || Math.ceil(arguments[i]) !== Math.floor(arguments[i])
       ) {
-        return undefined;
+        return undefined
       }
     }
     // Each argument is an integer.
     // If there is only 1 argument and it is negative:
     if (arguments.length === 1 && arguments[0] < 0) {
-      return undefined;
+      return undefined
     }
     // If there are 2 arguments and min > max:
     if (arguments.length === 2 && arguments[0] > arguments[1]) {
-      return undefined;
+      return undefined
     }
     // If there is only 1 argument:
     if (arguments.length === 1) {
       // Assign min and max.
-      max = min;
-      min = 0;
+      max = min
+      min = 0
     }
     // Return a random number between min and max, inclusive.
-    return min + Math.floor(Math.random() * (max + 1 - min));
+    return min + Math.floor(Math.random() * (max + 1 - min))
   }
   // Otherwise, i.e. if the argument is invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

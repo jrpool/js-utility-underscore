@@ -25,11 +25,11 @@ export default function _initial(array, n = 1) {
     )
   ) {
     // Return the first n elements as an array.
-    return array.slice(0, - n);
+    return array.slice(0, - n)
   }
   // Otherwise, i.e. if the arguments are invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

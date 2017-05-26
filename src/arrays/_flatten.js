@@ -17,7 +17,7 @@ export default function _flatten(array, shallow = false) {
     && (shallow !== undefined || typeof shallow === 'boolean')
   ) {
     // Initialize a result.
-    let result = [];
+    let result = []
     // For each element:
     for (let i = 0; i < array.length; i++) {
       // If it is an array:
@@ -26,20 +26,20 @@ export default function _flatten(array, shallow = false) {
           Concatenate it (if shallow) or its flattened array (if not shallow)
           to the result.
         */
-        result = result.concat(shallow ? array[i] : _flatten(array[i]));
+        result = result.concat(shallow ? array[i] : _flatten(array[i]))
       }
       // Otherwise, i.e. if it is not an array:
       else {
         // Add it to the end of the result.
-        result.push(array[i]);
+        result.push(array[i])
       }
     }
     // Return the result.
-    return result;
+    return result
   }
   // Otherwise, i.e. if the arguments are invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

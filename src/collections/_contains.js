@@ -29,13 +29,13 @@ export default function _size(list, value, fromIndex = 0) {
     )
   ) {
     // Identify an array of values to be searched.
-    const searchList = Array.isArray(list) ? list : Object.keys(list);
+    const searchList = Array.isArray(list) ? list : Object.keys(list)
     // Return whether list, from fromIndex to the end, contains value.
-    return searchList.slice(fromIndex).includes(value);
+    return searchList.slice(fromIndex).includes(value)
   }
   // Otherwise, i.e. if the argument is invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

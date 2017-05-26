@@ -20,18 +20,18 @@ export default function _escape(string) {
       '\'': '&#x27;'
     }
     // Identify a copy of the string.
-    let escapedString = string.slice();
+    let escapedString = string.slice()
     // For each character type to be escaped:
     for (let original in escaper) {
       // Replace its tokens in the string copy with thoir entities.
       escapedString
-        = escapedString.replace(RegExp(original, 'g'), escaper[original]);
+        = escapedString.replace(RegExp(original, 'g'), escaper[original])
     }
-    return escapedString;
+    return escapedString
   }
   // Otherwise, i.e. if the argument is invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

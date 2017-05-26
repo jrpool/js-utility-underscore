@@ -16,11 +16,11 @@ export default function _size(list) {
     && (Array.isArray(list) || typeof list === 'object')
   ) {
     // Return its size.
-    return Object.keys(list).length;
+    return Object.keys(list).length
   }
   // Otherwise, i.e. if the argument is invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

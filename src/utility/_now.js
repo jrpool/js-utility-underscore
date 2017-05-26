@@ -5,10 +5,10 @@
 export default function _now() {
   // If the argument count is valid:
   if (! arguments.length) {
-    return Date.now();
+    return Date.now()
   }
   // Otherwise, i.e. if there are any arguments:
   else {
-    return undefined;
+    return undefined
   }
 }
