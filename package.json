@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src -d lib",
-    "test": "mocha --compilers js:babel-register spec/*/*.js"
+    "test": "mocha --compilers js:babel-register spec/*/*.js",
+    "test2": "./node_modules/eslint/bin/eslint.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
     "babel-register": "^6.24.1",
     "chai": "^1.8.1",
     "chai-change": "^2.1.2",
+    "eslint": "^3.19.0",
     "mocha": "^2.0.1"
   },
   "author": "Keith and Jonathan",
