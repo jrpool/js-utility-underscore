@@ -17,7 +17,7 @@ describe('_escape', function() {
     it('escapes all required metacharacters', function() {
       expect(_escape('PG&E <<`electricity\'>> is "cheap"'))
       .to.equal(
-        'PG&amp;E &lt;&lt;&#x60electricity&#x27&gt;&gt; is &quot;cheap&quot;'
+        'PG&amp;E &lt;&lt;&#x60;electricity&#x27;&gt;&gt; is &quot;cheap&quot;'
       )
     })
     it('returns a blank string if given a blank string', function() {
@@ -27,7 +27,7 @@ describe('_escape', function() {
 
   context('no argument', function() {
     it('returns undefined when there is argument', function() {
-      expect(_escape(-5)).to.be.undefined
+      expect(_escape()).to.be.undefined
     })
   })
 
