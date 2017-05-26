@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import chai, { expect } from 'chai'
 import _noop from '../../src/utility/_noop'
 
 describe('_noop', function() {
@@ -16,7 +16,7 @@ describe('_noop', function() {
     expect(_noop([1, 2])).to.be.undefined
   })
   it('_noop() returns undefined when given {a: 1}', function() {
-    expect(_noop({ a: 1 })).to.be.undefined
+    expect(_noop({a: 1})).to.be.undefined
   })
   it('_noop() returns undefined when given undefined', function() {
     expect(_noop(undefined)).to.be.undefined

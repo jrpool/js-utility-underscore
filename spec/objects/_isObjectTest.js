@@ -1,3 +1,4 @@
+import chai from 'chai'
 import { expect } from 'chai'
 import _isObject from '../../src/objects/_isObject'
 

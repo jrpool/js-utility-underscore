@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import chai, { expect } from 'chai'
 import _identity from '../../src/utility/_identity'
 
 describe('_identity', function() {
@@ -35,10 +35,10 @@ describe('_identity', function() {
     expect(_identity({})).to.deep.equal({})
   })
   it('_identity() returns equivalent object when given an object', function() {
-    expect(_identity({ a: 1, b: 2 })).to.deep.equal({ a: 1, b: 2 })
+    expect(_identity({a: 1, b: 2})).to.deep.equal({a: 1, b: 2})
   })
   it('_identity() returns ref to same object when given an object', function() {
-    const thisObject = { a: 1, b: 2 }
+    const thisObject = {a: 1, b: 2}
     expect(_identity(thisObject)).to.equal(thisObject)
   })
   it('_identity() returns undefined when there is no argument', function() {
