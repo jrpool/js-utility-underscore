@@ -1,7 +1,14 @@
 # Common JS Utility Functions - Underscore
 
 ES2015 reimplementation of a portion of the Underscore library
+
 Project Team : fancy-thrasher
+
+Project Members:
+
+[Keith Oppel](https://github.com/mistakeets)
+
+[Jonathan Pool](https://github.com/jrpool)
 
 ## Notes
 
@@ -11,6 +18,25 @@ specifications, exist in this project.
 Any test files in which arrow function expressions could be but are not used
 are written to conform with the [recommendation][mocha] that “Passing arrow
 functions … to Mocha is discouraged”.
+
+## Installation and Setup
+
+0. These instructions presuppose that npm (https://nodejs.org/en/) is installed.
+
+1. Clone this repository into a local directory.
+
+2. In the local directory, install required dependencies (see package.json) by executing:
+
+    npm i
+
+3. In the local directory, perform the provided tests by executing:
+
+    npm test
+
+4. In the local directory, perform linting on the files in the `src` and `spec`
+directories by executing:
+
+    npm run eslint
 
 ## Functions
 
