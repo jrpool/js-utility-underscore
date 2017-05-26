@@ -2,7 +2,7 @@ import chai from 'chai'
 import { expect } from 'chai'
 import _extend from '../../src/objects/_extend'
 
-describe.only('_extend()', () => {
+describe('_extend()', () => {
   it('should be a function', () => {
     expect(_extend).to.be.a('function')
   })
