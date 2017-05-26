@@ -12,22 +12,23 @@ export default function _escape(string) {
   if (arguments.length === 1 && typeof arguments[0] === 'string') {
     // Define a table of character entities.
     const escaper = {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      '`': '&#x60;',
-      '\'': '&#x27;'
+      '&lt;': '<',
+      '&gt;': '>',
+      '&quot;': '"',
+      '&#x60;': '`',
+      '&#96;': '`',
+      '&#x27;': '\'',
+      '&amp;': '&'
     }
     // Identify a copy of the string.
-    let escapedString = string.slice();
-    // For each character type to be escaped:
+    let unescapedString = string.slice();
+    // For each character entity to be unescaped:
     for (let original in escaper) {
-      // Replace its tokens in the string copy with thoir entities.
-      escapedString
-        = escapedString.replace(RegExp(original, 'g'), escaper[original]);
+      // Replace its tokens in the string copy with the represented character.
+      unescapedString
+        = unescapedString.replace(RegExp(original, 'g'), escaper[original]);
     }
-    return escapedString;
+    return unescapedString;
   }
   // Otherwise, i.e. if the argument is invalid:
   else {
