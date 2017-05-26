@@ -13,9 +13,7 @@ export default function _compact(array) {
     && Array.isArray(array)
     && array.length === Object.keys(array).length
   ) {
-    const isTruthy = function(value) {
-      return !! value
-    }
+    const isTruthy = value => !! value
     return array.filter(isTruthy)
   }
   // Otherwise, i.e. if the arguments are invalid:
