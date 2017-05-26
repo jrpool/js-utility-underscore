@@ -7,7 +7,7 @@ function Car(name) {
 }
 Car.prototype.wheels = 4
 
-describe.only('_allKeys()', function() {
+describe('_allKeys()', function() {
   it('should be a function', function() {
     expect(_allKeys).to.be.a('function')
   })
