@@ -27,17 +27,17 @@ export default function _first(array, n = 1) {
     // If n === 1:
     if (n === 1) {
       // Return the first element as a scalar, or undefined if none.
-      return array[0];
+      return array[0]
     }
     // Otherwise, i.e. if n > 1:
     else {
       // Return the first n elements as an array.
-      return array.slice(0, n);
+      return array.slice(0, n)
     }
   }
   // Otherwise, i.e. if the arguments are invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

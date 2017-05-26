@@ -3,6 +3,49 @@
 ES2015 reimplementation of a portion of the Underscore library
 Project Team : fancy-thrasher
 
+## Functions
+
+```
+### arrays
+_compact.js
+_difference.js
+_first.js
+_flatten.js
+_initial.js
+_intersection.js
+_last_index_of.js
+_last.js
+_rest.js
+_union.js
+_without.js
+### collections
+_contains.js
+_size.js
+### objects
+_allKeys.js
+_clone.js
+_extend.js
+_has.js
+_isArguments.js
+_isArray.js
+_isEmpty.js
+_isFinite.js
+_isNull.js
+_isNumber.js
+_isObject.js
+_isString.js
+_isUndefined.js
+_keys.js
+_values.js
+### utility
+_escape.js
+_identity.js
+_noop.js
+_now.js
+_random.js
+_unescape.js
+```
+
 ## Challenge Rubric
 
 This goal will likely be within your ZPD if you...
@@ -63,16 +106,16 @@ This goal is the sister goal of [Common JS Utility Functions - Lodash](37-Common
 
 ## Specifications
 
-- [ ] Tests and correct implementations exist for **32** (not all) utility functions from the Underscore library.
-- [ ] Functions are organized into files with the same names as the function groups from Underscore (e.g. "Collections", "Functions", "Objects").
-- [ ] All code is written with ES2015.
-- [ ] Includes a README listing each method written and which file it is in.
-- [ ] Code uses a linter and there are no linting errors.
-- [ ] Code is well tested and all tests are passing.
-- [ ] All package dependencies are properly declared in `package.json`.
-- [ ] All major features are added via pull requests with a clear description and concise commit messages.
-- [ ] Every pull request has been reviewed by at least one other person.
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
+- [x] Tests and correct implementations exist for **32** (not all) utility functions from the Underscore library.
+- [x] Functions are organized into files with the same names as the function groups from Underscore (e.g. "Collections", "Functions", "Objects").
+- [x] All code is written with ES2015.
+- [x] Includes a README listing each method written and which file it is in.
+- [x] Code uses a linter and there are no linting errors.
+- [x] Code is well tested and all tests are passing.
+- [x] All package dependencies are properly declared in `package.json`.
+- [x] All major features are added via pull requests with a clear description and concise commit messages.
+- [x] Every pull request has been reviewed by at least one other person.
+- [x] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
 ### Stretch
 

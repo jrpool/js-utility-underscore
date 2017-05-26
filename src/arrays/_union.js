@@ -11,12 +11,12 @@ export default function _union() {
   const isValid = function(element) {
     return (!(
       Array.isArray(element) || ['function', 'object'].includes(typeof element)
-    ));
+    ))
   }
   // If the arguments are superficially valid:
   if (arguments.length) {
     // Initialize a result.
-    let result = [];
+    let result = []
     // For each argument:
     for (let i = 0; i < arguments.length; i++) {
       // If it is superficially valid:
@@ -31,24 +31,24 @@ export default function _union() {
             // If it is not yet in the result:
             if (! result.includes(arguments[i][j])) {
               // Append it to the result.
-              result.push(arguments[i][j]);
+              result.push(arguments[i][j])
             }
           }
           // Otherwise, i.e. if it is invalid:
           else {
-            return undefined;
+            return undefined
           }
         }
       }
       // Otherwise, i.e. if it is superficially invalid:
       else {
-        return undefined;
+        return undefined
       }
     }
-    return result;
+    return result
   }
   // Otherwise, i.e. if the arguments are superficially invalid:
   else {
-    return undefined;
+    return undefined
   }
 }

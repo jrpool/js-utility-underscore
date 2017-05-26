@@ -14,13 +14,13 @@ export default function _compact(array) {
     && array.length === Object.keys(array).length
   ) {
     const isTruthy = function(value) {
-      return !! value;
+      return !! value
     }
-    return array.filter(isTruthy);
+    return array.filter(isTruthy)
   }
   // Otherwise, i.e. if the arguments are invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

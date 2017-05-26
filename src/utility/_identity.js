@@ -8,11 +8,11 @@ export default function _identity(value) {
   // If the argument is valid:
   if (arguments.length === 1) {
     // Return it.
-    return value;
+    return value
   }
   // Otherwise, i.e. if the argument is invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }

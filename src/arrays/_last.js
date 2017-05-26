@@ -27,17 +27,17 @@ export default function _last(array, n = 1) {
     // If n === 1:
     if (n === 1) {
       // Return the last element as a scalar, or undefined if none.
-      return array[array.length - 1];
+      return array[array.length - 1]
     }
     // Otherwise, i.e. if n > 1:
     else {
       // Return the last n elements as an array.
-      return array.slice(- n);
+      return array.slice(- n)
     }
   }
   // Otherwise, i.e. if the arguments are invalid:
   else {
     // Return undefined.
-    return undefined;
+    return undefined
   }
 }
