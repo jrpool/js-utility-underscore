@@ -12,11 +12,9 @@
 */
 export default function _lastIndexOf(array, value, fromIndex = 0) {
   // Define a function to validate an element.
-  const isValidEl = function(element) {
-    return (!(
-      Array.isArray(element) || ['function', 'object'].includes(typeof element)
-    ))
-  }
+  const isValidEl = (element) => !(
+    Array.isArray(element) || ['function', 'object'].includes(typeof element)
+  )
   // If the arguments are superficially valid:
   if (
     arguments.length > 1

@@ -8,11 +8,11 @@
 */
 export default function _difference() {
   // Define a function to superficially validate an argument.
-  const isValidArg = function(arg) {
+  const isValidArg = (arg) => {
     return (Array.isArray(arg) && Object.keys(arg).length === arg.length)
   }
   // Define a function to validate an element.
-  const isValidEl = function(element) {
+  const isValidEl = (element) => {
     return (!(
       Array.isArray(element) || ['function', 'object'].includes(typeof element)
     ))

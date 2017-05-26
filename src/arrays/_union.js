@@ -8,11 +8,9 @@
 */
 export default function _union() {
   // Define a function to validate an element.
-  const isValid = function(element) {
-    return (!(
-      Array.isArray(element) || ['function', 'object'].includes(typeof element)
-    ))
-  }
+  const isValid = (element) => !(
+    Array.isArray(element) || ['function', 'object'].includes(typeof element)
+  )
   // If the arguments are superficially valid:
   if (arguments.length) {
     // Initialize a result.

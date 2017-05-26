@@ -10,11 +10,9 @@
 */
 export default function _without(array) {
   // Define a function to validate an element.
-  const isValid = function(element) {
-    return (!(
-      Array.isArray(element) || ['function', 'object'].includes(typeof element)
-    ))
-  }
+  const isValid = (element) => !(
+    Array.isArray(element) || ['function', 'object'].includes(typeof element)
+  )
   // If the arguments are valid:
   if (
     array !== undefined
