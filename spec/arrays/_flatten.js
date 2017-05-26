@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _flatten from '../../src/arrays/_flatten'
 
 describe('_flatten', function() {

@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _union from '../../src/arrays/_union'
 
 describe('_union', function() {

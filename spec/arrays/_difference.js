@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _difference from '../../src/arrays/_difference'
 
 describe('_difference', function() {

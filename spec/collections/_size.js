@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _size from '../../src/collections/_size'
 
 describe('_size', function() {

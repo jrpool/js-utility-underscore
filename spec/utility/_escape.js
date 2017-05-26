@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _escape from '../../src/utility/_escape'
 
 describe('_escape', function() {
