@@ -11,7 +11,7 @@ describe('_isEmpty()', function() {
     expect(_isEmpty).to.be.a('function')
   })
   it('returns false if given an array that is not empty', function() {
-    expect(_isEmpty([4, 5, "car", "stuff", 42])).to.be.false
+    expect(_isEmpty([4, 5, 'car', 'stuff', 42])).to.be.false
   })
   it('returns true if given array has no values', function() {
     expect(_isEmpty([])).to.be.true

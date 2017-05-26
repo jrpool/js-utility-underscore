@@ -33,19 +33,19 @@ describe('_random', function() {
     it(
       'returns undefined when either argument is undefined',
       function() {
-       expect(_random(undefined)).to.be.undefined
+        expect(_random(undefined)).to.be.undefined
       }
     )
     it(
       'returns undefined when either argument is a string',
       function() {
-       expect(_random('5', 10)).to.be.undefined
+        expect(_random('5', 10)).to.be.undefined
       }
     )
     it(
       'returns undefined when either argument is an array',
       function() {
-       expect(_random(5, [10])).to.be.undefined
+        expect(_random(5, [10])).to.be.undefined
       }
     )
     it(
@@ -72,13 +72,13 @@ describe('_random', function() {
     it(
       'returns undefined when argument 0 is not a number',
       function() {
-       expect(_random(undefined)).to.be.undefined
+        expect(_random(undefined)).to.be.undefined
       }
     )
     it(
       'returns undefined when argument 0 is an array',
       function() {
-       expect(_random([10, 20])).to.be.undefined
+        expect(_random([10, 20])).to.be.undefined
       }
     )
   })

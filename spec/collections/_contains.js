@@ -48,7 +48,7 @@ describe('_contains', function() {
       expect(_contains([], 'element')).to.be.false
     })
     it('returns true when given {"": "zilch", x: "stuff"} and “”', function() {
-      expect(_contains({"": "zilch", x: "stuff"}, '')).to.be.true
+      expect(_contains({'': 'zilch', x: 'stuff'}, '')).to.be.true
     })
     it('returns false when given {} and “”', function() {
       expect(_contains({}, '')).to.be.false
@@ -105,7 +105,7 @@ describe('_contains', function() {
     it(
       'returns true when given {"": "zilch", x: "stuff"}, “”, and 0',
       function() {
-        expect(_contains({"": "zilch", x: "stuff"}, '')).to.be.true
+        expect(_contains({'': 'zilch', x: 'stuff'}, '')).to.be.true
       }
     )
     it('returns false when given {}, “”, and 0', function() {

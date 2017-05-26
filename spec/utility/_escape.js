@@ -38,13 +38,13 @@ describe('_escape', function() {
     it(
       'returns undefined when argument 0 is undefined',
       function() {
-       expect(_escape(undefined)).to.be.undefined
+        expect(_escape(undefined)).to.be.undefined
       }
     )
     it(
       'returns undefined when argument 0 is an array',
       function() {
-       expect(_escape(['string'])).to.be.undefined
+        expect(_escape(['string'])).to.be.undefined
       }
     )
     it(
