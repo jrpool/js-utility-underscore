@@ -40,13 +40,13 @@ describe('_unescape', function() {
     it(
       'returns undefined when argument 0 is undefined',
       function() {
-       expect(_unescape(undefined)).to.be.undefined
+        expect(_unescape(undefined)).to.be.undefined
       }
     )
     it(
       'returns undefined when argument 0 is an array',
       function() {
-       expect(_unescape(['string'])).to.be.undefined
+        expect(_unescape(['string'])).to.be.undefined
       }
     )
     it(

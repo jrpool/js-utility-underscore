@@ -52,8 +52,8 @@ describe('_intersection', function() {
     it(
       '_intersection() returns undefined when any argument is a sparse array',
       function() {
-        const sparseArray = [];
-        sparseArray[3] = 'fourth';
+        const sparseArray = []
+        sparseArray[3] = 'fourth'
         expect(_intersection([1, 2], sparseArray)).to.be.undefined
       }
     )
@@ -78,14 +78,14 @@ describe('_intersection', function() {
     it(
       '_intersection() returns undefined when any argument contains a function',
       function() {
-        const fn = function() {return 'hello'};
+        const fn = function() {return 'hello'}
         expect(_intersection([1, 2, 3, fn, 4, 5], [2, 3, 4])).to.be.undefined
       }
     )
     it(
       '_intersection() returns undefined when any argument is not an array',
       function() {
-        const fn = function() {return 'hello'};
+        const fn = function() {return 'hello'}
         expect(_intersection(1, [1, 2, 3])).to.be.undefined
         expect(_intersection([3, 4], 3)).to.be.undefined
         expect(_intersection([3, 4], '3')).to.be.undefined

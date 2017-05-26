@@ -65,7 +65,7 @@ describe('_without', function() {
       expect(_without(anArray, null)).to.be.undefined
     })
     it('_without() returns undefined when array contains a function', function() {
-      const fn = function() {return 'hello'};
+      const fn = function() {return 'hello'}
       const anArray = [1, 2, fn, 'a']
       expect(_without(anArray, 1, 2)).to.be.undefined
       expect(_without(anArray, fn, 2)).to.be.undefined
@@ -90,7 +90,7 @@ describe('_without', function() {
       function() {
         const nonArray = {key: 1}
         expect(_without(nonArray, 'key')).to.be.undefined
-    })
+      })
 
   })
 

@@ -28,7 +28,7 @@ describe('_identity', function() {
     expect(_identity([1, 2, 3])).to.deep.equal([1, 2, 3])
   })
   it('_identity() returns ref to same array when given an array', function() {
-    const thisArray = [1, 2, 3];
+    const thisArray = [1, 2, 3]
     expect(_identity(thisArray)).to.equal(thisArray)
   })
   it('_identity() returns empty object when given an empty object', function() {
@@ -38,7 +38,7 @@ describe('_identity', function() {
     expect(_identity({a: 1, b: 2})).to.deep.equal({a: 1, b: 2})
   })
   it('_identity() returns ref to same object when given an object', function() {
-    const thisObject = {a: 1, b: 2};
+    const thisObject = {a: 1, b: 2}
     expect(_identity(thisObject)).to.equal(thisObject)
   })
   it('_identity() returns undefined when there is no argument', function() {

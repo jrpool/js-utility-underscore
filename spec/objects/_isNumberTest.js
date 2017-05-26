@@ -16,7 +16,7 @@ describe('_isNumber()', function() {
     expect(_isNumber('3')).to.be.false
   })
   it('returns true if an array element is a number', function() {
-    const anArray = ["town", 253, "somewhere", 4]
+    const anArray = ['town', 253, 'somewhere', 4]
     expect(_isNumber(anArray[1])).to.be.true
   })
   it('returns false if no input parameter is given', function() {

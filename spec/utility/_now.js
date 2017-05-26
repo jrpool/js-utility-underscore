@@ -24,7 +24,7 @@ describe('_now', function() {
 
   context('arguments', function() {
     it('returns undefined when an argument is given', function() {
-       expect(_now(1)).to.be.undefined
+      expect(_now(1)).to.be.undefined
     })
   })
 
