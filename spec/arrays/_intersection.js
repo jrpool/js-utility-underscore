@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _intersection from '../../src/arrays/_intersection'
 
 describe('_intersection', function() {
@@ -28,7 +28,7 @@ describe('_intersection', function() {
     })
     it('_intersection() returns the intersection of 3 arrays', function() {
       expect(
-        _intersection([1, 2, 1, 'c'], [2, 'b', 'c', 1], [undefined, 2, 1, 7]))
+          _intersection([1, 2, 1, 'c'], [2, 'b', 'c', 1], [undefined, 2, 1, 7]))
         .to.deep.equal([1, 2])
     })
     it(
@@ -66,7 +66,7 @@ describe('_intersection', function() {
     it(
       '_intersection() returns undefined when any argument contains an object',
       function() {
-        expect(_intersection(['a'], [1, 2, {a: 1, b: 2}])).to.be.undefined
+        expect(_intersection(['a'], [1, 2, { a: 1, b: 2 }])).to.be.undefined
       }
     )
     it(
@@ -78,14 +78,14 @@ describe('_intersection', function() {
     it(
       '_intersection() returns undefined when any argument contains a function',
       function() {
-        const fn = function() {return 'hello'}
+        const fn = function() { return 'hello' }
         expect(_intersection([1, 2, 3, fn, 4, 5], [2, 3, 4])).to.be.undefined
       }
     )
     it(
       '_intersection() returns undefined when any argument is not an array',
       function() {
-        const fn = function() {return 'hello'}
+        const fn = function() { return 'hello' }
         expect(_intersection(1, [1, 2, 3])).to.be.undefined
         expect(_intersection([3, 4], 3)).to.be.undefined
         expect(_intersection([3, 4], '3')).to.be.undefined

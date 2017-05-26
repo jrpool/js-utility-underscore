@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _escape from '../../src/utility/_escape'
 
 describe('_escape', function() {
@@ -16,9 +16,9 @@ describe('_escape', function() {
     })
     it('escapes all required metacharacters', function() {
       expect(_escape('PG&E <<`electricity\'>> is "cheap"'))
-      .to.equal(
-        'PG&amp;E &lt;&lt;&#x60;electricity&#x27;&gt;&gt; is &quot;cheap&quot;'
-      )
+        .to.equal(
+          'PG&amp;E &lt;&lt;&#x60;electricity&#x27;&gt;&gt; is &quot;cheap&quot;'
+        )
     })
     it('returns a blank string if given a blank string', function() {
       expect(_escape('')).to.equal('')
@@ -48,7 +48,8 @@ describe('_escape', function() {
       }
     )
     it(
-      'returns undefined when argument 0 is null', function() {
+      'returns undefined when argument 0 is null',
+      function() {
         expect(_escape(null)).to.be.undefined
       }
     )

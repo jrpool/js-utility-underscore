@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _difference from '../../src/arrays/_difference'
 
 describe('_difference', function() {
@@ -30,10 +30,9 @@ describe('_difference', function() {
       function() {
         expect(
           _difference(
-            [1, -33, 2, 1, - Infinity, 'c'], [2, 'b', 'c', 1],
-            [undefined, 2, 1, 7]
+            [1, -33, 2, 1, -Infinity, 'c'], [2, 'b', 'c', 1], [undefined, 2, 1, 7]
           )
-        ).to.deep.equal([-33, - Infinity])
+        ).to.deep.equal([-33, -Infinity])
       }
     )
     it(
@@ -71,7 +70,7 @@ describe('_difference', function() {
     it(
       '_difference() returns undefined when any argument contains an object',
       function() {
-        expect(_difference(['a'], [1, 2, {a: 1, b: 2}])).to.be.undefined
+        expect(_difference(['a'], [1, 2, { a: 1, b: 2 }])).to.be.undefined
       }
     )
     it(
@@ -83,14 +82,14 @@ describe('_difference', function() {
     it(
       '_difference() returns undefined when any argument contains a function',
       function() {
-        const fn = function() {return 'hello'}
+        const fn = function() { return 'hello' }
         expect(_difference([1, 2, 3, fn, 4, 5], [2, 3, 4])).to.be.undefined
       }
     )
     it(
       '_difference() returns undefined when any argument is not an array',
       function() {
-        const fn = function() {return 'hello'}
+        const fn = function() { return 'hello' }
         expect(_difference(1, [2, 3])).to.be.undefined
         expect(_difference([3, 4], 3)).to.be.undefined
         expect(_difference([3, 4], '3')).to.be.undefined
