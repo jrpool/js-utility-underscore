@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _lastIndexOf from '../../src/arrays/_last_index_of'
 
 describe('_lastIndexOf', function() {
@@ -31,11 +31,11 @@ describe('_lastIndexOf', function() {
         .to.equal(4)
     })
     it('matches Infinity instances', function() {
-      expect(_lastIndexOf(['b', 7, - Infinity, 'stuf'], - Infinity))
+      expect(_lastIndexOf(['b', 7, -Infinity, 'stuf'], -Infinity))
         .to.equal(2)
     })
     it('matches NaN instances', function() {
-      expect(_lastIndexOf([NaN, 7, - Infinity, NaN, 'stuf'], - Infinity))
+      expect(_lastIndexOf([NaN, 7, -Infinity, NaN, 'stuf'], -Infinity))
         .to.equal(2)
     })
   })
@@ -82,7 +82,7 @@ describe('_lastIndexOf', function() {
       expect(_lastIndexOf('[1, 2]', 0)).to.be.undefined
     })
     it('with argument 0 an object returns undefined', function() {
-      expect(_lastIndexOf({a: 1})).to.be.undefined
+      expect(_lastIndexOf({ a: 1 })).to.be.undefined
     })
     it('with argument 0 null returns undefined', function() {
       expect(_lastIndexOf(null)).to.be.undefined
@@ -109,7 +109,7 @@ describe('_lastIndexOf', function() {
       expect(_lastIndexOf([1, 2, [3, 4], 5], 2)).to.be.undefined
     })
     it('with argument 0 including an object returns undefined', function() {
-      expect(_lastIndexOf([1, 2, {a: 3}, 5], 2, 1)).to.be.undefined
+      expect(_lastIndexOf([1, 2, { a: 3 }, 5], 2, 1)).to.be.undefined
     })
   })
 

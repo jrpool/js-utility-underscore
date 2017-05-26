@@ -1,4 +1,3 @@
-import chai from 'chai'
 import { expect } from 'chai'
 import _isArguments from '../../src/objects/_isArguments'
 

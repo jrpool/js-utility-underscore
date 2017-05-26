@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _contains from '../../src/collections/_contains'
 
 describe('_contains', function() {
@@ -48,13 +48,13 @@ describe('_contains', function() {
       expect(_contains([], 'element')).to.be.false
     })
     it('returns true when given {"": "zilch", x: "stuff"} and “”', function() {
-      expect(_contains({'': 'zilch', x: 'stuff'}, '')).to.be.true
+      expect(_contains({ '': 'zilch', x: 'stuff' }, '')).to.be.true
     })
     it('returns false when given {} and “”', function() {
       expect(_contains({}, '')).to.be.false
     })
     it('returns false when given {a: 1} and NaN', function() {
-      expect(_contains({a: 1}, NaN)).to.be.false
+      expect(_contains({ a: 1 }, NaN)).to.be.false
     })
   })
 
@@ -74,14 +74,14 @@ describe('_contains', function() {
     it(
       'returns true when given {alpha: 1, beta: 2}, “beta”, and 1',
       function() {
-        expect(_contains({alpha: 1, beta: 2}, 'beta', 1)).to.be.true
+        expect(_contains({ alpha: 1, beta: 2 }, 'beta', 1)).to.be.true
       }
     )
     it(
       'returns true when given {alpha: 1, beta: 2, gamma: 3}, “beta”, and 1',
       function() {
-        expect(_contains({alpha: 1, beta: 2, gamma: 3}, 'beta', 1))
-        .to.be.true
+        expect(_contains({ alpha: 1, beta: 2, gamma: 3 }, 'beta', 1))
+          .to.be.true
       }
     )
     it('returns false when given [1, 2, "3", 10], 3, and 1', function() {
@@ -105,14 +105,14 @@ describe('_contains', function() {
     it(
       'returns true when given {"": "zilch", x: "stuff"}, “”, and 0',
       function() {
-        expect(_contains({'': 'zilch', x: 'stuff'}, '')).to.be.true
+        expect(_contains({ '': 'zilch', x: 'stuff' }, '')).to.be.true
       }
     )
     it('returns false when given {}, “”, and 0', function() {
       expect(_contains({}, '', 0)).to.be.false
     })
     it('returns false when given {a: 1}, NaN, and 0', function() {
-      expect(_contains({a: 1}, NaN, 0)).to.be.false
+      expect(_contains({ a: 1 }, NaN, 0)).to.be.false
     })
     it('returns true when given [8, undefined], undefined, and 1', function() {
       expect(_contains([8, undefined], undefined, 1)).to.be.true

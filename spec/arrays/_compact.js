@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _compact from '../../src/arrays/_compact'
 
 describe('_compact', function() {
@@ -14,9 +14,10 @@ describe('_compact', function() {
 
   it('_compact() returns array without falsy elements', function() {
     let anArray = [
-      1, undefined, [2], false, {key: '3'}, null, '4', 0, 5, NaN, 6, ''
+      1, undefined, [2], false, { key: '3' },
+      null, '4', 0, 5, NaN, 6, ''
     ]
-    expect(_compact(anArray)).to.deep.equal([1, [2], {key: '3'}, '4', 5, 6])
+    expect(_compact(anArray)).to.deep.equal([1, [2], { key: '3' }, '4', 5, 6])
   })
   it('_compact() returns undefined when given a sparse array', function() {
     const anArray = []
@@ -32,7 +33,7 @@ describe('_compact', function() {
     expect(_compact(nonArray)).to.be.undefined
   })
   it('_compact() returns undefined when given a nonarray object', function() {
-    const nonArray = {key: 1}
+    const nonArray = { key: 1 }
     expect(_compact(nonArray)).to.be.undefined
   })
 

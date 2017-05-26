@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _random from '../../src/utility/_random'
 
 describe('_random', function() {
@@ -49,7 +49,8 @@ describe('_random', function() {
       }
     )
     it(
-      'returns undefined when either argument is null', function() {
+      'returns undefined when either argument is null',
+      function() {
         expect(_random(null, 20)).to.be.undefined
       }
     )

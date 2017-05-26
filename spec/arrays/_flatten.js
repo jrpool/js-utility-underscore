@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _flatten from '../../src/arrays/_flatten'
 
 describe('_flatten', function() {
@@ -15,7 +15,8 @@ describe('_flatten', function() {
     })
 
     it(
-      '_flatten() returns a copy of a 1-level array', function() {
+      '_flatten() returns a copy of a 1-level array',
+      function() {
         let anArray = [1, 2, 3]
         expect(_flatten(anArray, true)).to.deep.equal([1, 2, 3])
       }
@@ -31,17 +32,27 @@ describe('_flatten', function() {
       '_flatten() converts a complex 2-level array to a 1-level array',
       function() {
         let anArray = [
-          1, [2, 3], undefined, [4], [], {key: '5'}, null, 'string', NaN, ''
+          1, [2, 3], undefined, [4],
+          [], { key: '5' },
+          null, 'string', NaN, ''
         ]
         expect(_flatten(anArray, true)).to.deep.equal([
-          1, 2, 3, undefined, 4, {key: '5'}, null, 'string', NaN, ''
+          1, 2, 3, undefined, 4, { key: '5' },
+          null, 'string', NaN, ''
         ])
       }
     )
     it('_flatten() converts a 3-level array to a 2-level array', function() {
-      let anArray = [1, [2, [3]], [4, [5, '6']], [[]]]
+      let anArray = [1, [2, [3]],
+        [4, [5, '6']],
+        [
+          []
+        ]
+      ]
       expect(_flatten(anArray, true))
-        .to.deep.equal([1, 2, [3], 4, [5, '6'], []])
+        .to.deep.equal([1, 2, [3], 4, [5, '6'],
+          []
+        ])
     })
     it('_flatten() returns undefined when given a sparse array', function() {
       const anArray = []
@@ -57,7 +68,7 @@ describe('_flatten', function() {
       expect(_flatten(nonArray, true)).to.be.undefined
     })
     it('_flatten() returns undefined when given a nonarray object', function() {
-      const nonArray = {key: 1}
+      const nonArray = { key: 1 }
       expect(_flatten(nonArray, true)).to.be.undefined
     })
 
@@ -72,14 +83,22 @@ describe('_flatten', function() {
 
     it('_flatten() converts a 2-level array to a 1-level array', function() {
       let anArray = [
-        1, [2, 3], undefined, [4], [], {key: '5'}, null, 'string', NaN, ''
+        1, [2, 3], undefined, [4],
+        [], { key: '5' },
+        null, 'string', NaN, ''
       ]
       expect(_flatten(anArray, false)).to.deep.equal([
-        1, 2, 3, undefined, 4, {key: '5'}, null, 'string', NaN, ''
+        1, 2, 3, undefined, 4, { key: '5' },
+        null, 'string', NaN, ''
       ])
     })
     it('_flatten() converts a 3-level array to a 1-level array', function() {
-      let anArray = [1, [2, [3]], [4, [5, '6']], [[]]]
+      let anArray = [1, [2, [3]],
+        [4, [5, '6']],
+        [
+          []
+        ]
+      ]
       expect(_flatten(anArray, false))
         .to.deep.equal([1, 2, 3, 4, 5, '6'])
     })
@@ -97,7 +116,7 @@ describe('_flatten', function() {
       expect(_flatten(nonArray, false)).to.be.undefined
     })
     it('_flatten() returns undefined when given a nonarray object', function() {
-      const nonArray = {key: 1}
+      const nonArray = { key: 1 }
       expect(_flatten(nonArray, false)).to.be.undefined
     })
 
@@ -112,14 +131,22 @@ describe('_flatten', function() {
 
     it('_flatten() converts a 2-level array to a 1-level array', function() {
       let anArray = [
-        1, [2, 3], undefined, [4], [], {key: '5'}, null, 'string', NaN, ''
+        1, [2, 3], undefined, [4],
+        [], { key: '5' },
+        null, 'string', NaN, ''
       ]
       expect(_flatten(anArray)).to.deep.equal([
-        1, 2, 3, undefined, 4, {key: '5'}, null, 'string', NaN, ''
+        1, 2, 3, undefined, 4, { key: '5' },
+        null, 'string', NaN, ''
       ])
     })
     it('_flatten() converts a 3-level array to a 1-level array', function() {
-      let anArray = [1, [2, [3]], [4, [5, '6']], [[]]]
+      let anArray = [1, [2, [3]],
+        [4, [5, '6']],
+        [
+          []
+        ]
+      ]
       expect(_flatten(anArray))
         .to.deep.equal([1, 2, 3, 4, 5, '6'])
     })
@@ -137,7 +164,7 @@ describe('_flatten', function() {
       expect(_flatten(nonArray)).to.be.undefined
     })
     it('_flatten() returns undefined when given a nonarray object', function() {
-      const nonArray = {key: 1}
+      const nonArray = { key: 1 }
       expect(_flatten(nonArray)).to.be.undefined
     })
 

@@ -1,4 +1,3 @@
-import chai from 'chai'
 import { expect } from 'chai'
 import _isFinite from '../../src/objects/_isFinite'
 

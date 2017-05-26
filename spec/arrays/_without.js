@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _without from '../../src/arrays/_without'
 
 describe('_without', function() {
@@ -55,9 +55,9 @@ describe('_without', function() {
       expect(_without(anArray, [3])).to.be.undefined
     })
     it('_without() returns undefined when array contains an object', function() {
-      const anArray = [1, 2, 'a', {a: 1}]
+      const anArray = [1, 2, 'a', { a: 1 }]
       expect(_without(anArray, 1, 2)).to.be.undefined
-      expect(_without(anArray, {a: 1})).to.be.undefined
+      expect(_without(anArray, { a: 1 })).to.be.undefined
     })
     it('_without() returns undefined when array contains null', function() {
       const anArray = [1, 2, null, 3]
@@ -65,7 +65,7 @@ describe('_without', function() {
       expect(_without(anArray, null)).to.be.undefined
     })
     it('_without() returns undefined when array contains a function', function() {
-      const fn = function() {return 'hello'}
+      const fn = function() { return 'hello' }
       const anArray = [1, 2, fn, 'a']
       expect(_without(anArray, 1, 2)).to.be.undefined
       expect(_without(anArray, fn, 2)).to.be.undefined
@@ -88,7 +88,7 @@ describe('_without', function() {
     it(
       '_without() returns undefined when argument 0 is a nonarray object',
       function() {
-        const nonArray = {key: 1}
+        const nonArray = { key: 1 }
         expect(_without(nonArray, 'key')).to.be.undefined
       })
 
