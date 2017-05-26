@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _lastIndexOf from '../../src/arrays/_last_index_of'
 
 describe('_lastIndexOf', function() {

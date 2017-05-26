@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _identity from '../../src/utility/_identity'
 
 describe('_identity', function() {

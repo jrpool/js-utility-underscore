@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _initial from '../../src/arrays/_initial'
 
 describe('_initial', function() {

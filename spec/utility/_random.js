@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _random from '../../src/utility/_random'
 
 describe('_random', function() {

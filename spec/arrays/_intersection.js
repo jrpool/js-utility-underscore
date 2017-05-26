@@ -1,4 +1,4 @@
-import chai, { expect } from 'chai'
+import { expect } from 'chai'
 import _intersection from '../../src/arrays/_intersection'
 
 describe('_intersection', function() {
